@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useState } from "react";
 export const SelectDate = ({ onChange }: { onChange: (e: any) => void }) => {
+  const [count, setCount] = useState(0);
+  console.log("count", count);
+  useEffect(() => {
+    if (count === 1) {
+      console.log("in useEffect");
+      onChange(count);
+      setCount(10);
+    }
+  }, [count]);
   return (
     <div>
-      <button onClick={() => onChange("2018-10-10")}>今日</button>
-      <button onClick={() => onChange("2018-10-09")}>昨日</button>
-      <button onClick={() => onChange("2018-10-11")}>明日</button>
+      <span>{count}</span>
+      <button onClick={() => setCount(count + 1)}>今日</button>
     </div>
   );
 };

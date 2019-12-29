@@ -12,6 +12,7 @@ export const DayActiveComponent = ({
   const onChange = (e: any) => {
     setSelectedDate(e);
   };
+  // console.log("in DayActiveComponent");
 
   return (
     <>
