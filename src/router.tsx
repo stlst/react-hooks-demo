@@ -8,6 +8,7 @@ import { DemoUseContext } from "./page/DemoUseContext";
 import { DemoUseEffect } from "./page/DemoUseEffect/index";
 import { DemoUseFetchData } from "./page/DemoUseFetchData/index";
 import { DemoUseState } from "./page/DemoUseState/index";
+import { DemoCustomModal } from "./page/DemoCustomModal/index";
 export interface RouteType {
   routerPath: string;
   component: React.ComponentType;
@@ -36,7 +37,8 @@ const routes: RouteType[] = [
     component: DemoUseFetchData
   },
   { routerPath: "rules", component: DemoRules },
-  { routerPath: "statement", component: DemoStatement }
+  { routerPath: "statement", component: DemoStatement },
+  { routerPath: "customModal", component: DemoCustomModal }
 ];
 
 export const history = createBrowserHistory();
